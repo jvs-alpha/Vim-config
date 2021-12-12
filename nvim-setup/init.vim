@@ -27,8 +27,10 @@ nnoremap <C-t> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-f> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
-
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 nmap <F8> :TagbarToggle<CR>
+
 
 :set completeopt-=preview " For No Previews
 
@@ -61,4 +63,3 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
